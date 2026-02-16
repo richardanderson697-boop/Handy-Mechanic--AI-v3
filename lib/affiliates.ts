@@ -1,4 +1,4 @@
-Import { ReferralAction, AffiliatePartner } from '@/types/referrals';
+import { ReferralAction, AffiliatePartner } from '@/types/referrals';
 
 /**
  * Generates an attributed affiliate link for the user.

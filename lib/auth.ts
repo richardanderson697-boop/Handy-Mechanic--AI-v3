@@ -1,4 +1,4 @@
-Import bcrypt from 'bcryptjs';
+import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 import type { User } from './types';
 
