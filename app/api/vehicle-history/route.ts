@@ -1,4 +1,4 @@
-Import { NextRequest, NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import { supabaseAdmin } from '@/lib/database';
 import { getUserFromHeaders } from '@/lib/auth';
 import {

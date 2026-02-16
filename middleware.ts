@@ -1,21 +1,20 @@
-// middleware.ts
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
-import { globalRateLimiter } from './lib/security/rate-limiter';
 
-export async function middleware(request: NextRequest) {
-  // Only protect the /api/diagnose route
-  if (request.nextUrl.pathname.startsWith('/api/diagnose')) {
-    const ip = request.ip ?? "127.0.0.1";
-    const { success } = await globalRateLimiter.limit(ip);
-
-    if (!success) {
-      return new NextResponse("Too many requests. Slow down, turbo.", { status: 429 });
-    }
-
-    // Add logic here to verify Supabase Auth Token
-    // and check user.credits > request_cost
-  }
-  
+export function middleware(request: NextRequest) {
+  // Add middleware logic here as needed
   return NextResponse.next();
 }
+
+export const config = {
+  matcher: [
+    /*
+     * Match all request paths except for the ones starting with:
+     * - api (API routes)
+     * - _next/static (static files)
+     * - _next/image (image optimization files)
+     * - favicon.ico (favicon file)
+     */
+    '/((?!api|_next/static|_next/image|favicon.ico).*)',
+  ],
+};
