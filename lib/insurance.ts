@@ -1,4 +1,4 @@
-Import type { InsuranceQuoteRequest, InsuranceQuoteResult } from '../types';
+import type { InsuranceQuoteRequest, InsuranceQuoteResult } from '../types';
 import { v4 as uuidv4 } from 'uuid';
 
 /**

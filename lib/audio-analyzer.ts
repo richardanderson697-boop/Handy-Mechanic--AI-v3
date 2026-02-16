@@ -1,4 +1,4 @@
-Import type { AudioFeatures, AudioClassification, AudioPattern, AudioAnalysis } from '../types';
+import type { AudioFeatures, AudioClassification, AudioPattern, AudioAnalysis } from '../types';
 
 /**
  * Audio Analysis Engine for Automotive Sounds

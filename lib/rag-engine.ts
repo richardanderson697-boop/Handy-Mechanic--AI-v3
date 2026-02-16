@@ -1,4 +1,4 @@
-Import { Pinecone } from '@pinecone-database/pinecone';
+import { Pinecone } from '@pinecone-database/pinecone';
 import OpenAI from 'openai';
 import Anthropic from '@anthropic-ai/sdk';
 import type {

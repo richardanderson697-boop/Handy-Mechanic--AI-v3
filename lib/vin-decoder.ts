@@ -1,4 +1,4 @@
-Import type { VINDecodeResult, NHTSARecall } from '../types';
+import type { VINDecodeResult, NHTSARecall } from '../types';
 
 /**
  * Decode VIN using NHTSA API (free, no API key required)

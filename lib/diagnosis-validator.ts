@@ -1,4 +1,4 @@
-Import { DiagnosisResult } from '@/types/diagnosis';
+import { DiagnosisResult } from '@/types/diagnosis';
 
 /**
  * Validates AI-generated diagnosis against safety constraints.
