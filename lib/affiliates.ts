@@ -33,3 +33,14 @@ export const logReferralClick = async (action: ReferralAction) => {
   console.log(`[LOG]: Referral clicked for ${action.provider_name}. Tracking ID: ${action.id}`);
   // In production: await db.referralAction.create({ data: action });
 };
+export interface ReferralAction {
+  id: string;
+  provider_name: string; // Add this exact line!
+  // ... keep any other fields you have
+}
+
+export interface AffiliatePartner {
+  id: string;
+  name: string;
+  deep_link_template: string;
+}
