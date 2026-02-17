@@ -10,6 +10,7 @@ export interface ReferralAction {
 export interface AffiliatePartner {
   id: string;
   name: string;
+  deep_link_template: string;
   commissionRate: number;
   apiKey?: string;
   active: boolean;
