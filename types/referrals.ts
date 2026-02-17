@@ -23,4 +23,5 @@ export interface ReferralReward {
   currency: string;
   status: 'pending' | 'approved' | 'paid';
   createdAt: Date;
+deep_link_template: string;
 }
