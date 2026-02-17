@@ -1,6 +1,7 @@
 export interface ReferralAction {
   type: 'signup' | 'purchase' | 'referral' | 'subscription';
   userId: string;
+  provider_name_string;
   referralCode?: string;
   timestamp: Date;
   amount?: number;
