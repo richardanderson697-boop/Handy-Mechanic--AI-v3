@@ -124,7 +124,10 @@ export interface AffiliatePartner {
   commissionRate: number;
   apiKey?: string;
   active: boolean;
+  // Add this line to resolve the build error:
+  deep_link_template?: string; 
 }
+
 
 // User Types
 export interface User {
