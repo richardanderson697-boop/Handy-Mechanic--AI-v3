@@ -1,16 +1,6 @@
-import { ReferralAction, AffiliatePartner } from '@/types/referrals';
+import { ReferralAction, import { ReferralAction, AffiliatePartner } from '@/types/referrals';
 
-/**// @/types/referrals.ts
-
-export interface AffiliatePartner {
-  id: string;
-  name: string;
-  // ... other existing fields (e.g., logo, description)
-  
-  // Add this line:
-  deep_link_template: string; 
-}
-
+/**
  * Generates an attributed affiliate link for the user.
  * This ID should be stored in your DB to match against partner postbacks.
  */
@@ -20,6 +10,8 @@ export const generateAffiliateUrl = (
   diagnosisId: string,
   vin?: string
 ): string => {
+  // ... 
+
   // Create a unique tracking string (SubID) for the partner
   const trackingId = `ref_${userId}_${Date.now()}`;
 
